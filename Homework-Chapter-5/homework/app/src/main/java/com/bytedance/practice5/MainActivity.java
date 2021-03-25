@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.bytedance.practice5.model.Message;
+import com.bytedance.practice5.model.MessageListResponse;
 import com.bytedance.practice5.socket.SocketActivity;
 import com.facebook.drawee.backends.pipeline.Fresco;
 import com.google.gson.Gson;
@@ -112,10 +113,9 @@ public class MainActivity extends AppCompatActivity {
                 InputStream in = conn.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8));
 
-                JsonObject jsonObject = new Gson().fromJson(reader, JsonObject.class);
+                MessageListResponse resp = new Gson().fromJson(reader, MessageListResponse.class);
 
-                result = new Gson().fromJson(jsonObject.get("feeds"), new TypeToken<List<Message>>() {
-                }.getType());
+                result = resp.feeds;
 
                 reader.close();
                 in.close();
