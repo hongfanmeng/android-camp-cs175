@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Chapter7HW</string>
+    <string name="pause">暂停</string>
+    <string name="stop">停止</string>
+    <string name="start">开始</string>
+    <string name="media_url">
+        https://mpvideo.qpic.cn/0b78c4aawaaaqeapfvlu6bqfaf6dbmlqacya.f10002.mp4?dis_k=b60270f21802ab2d08a9adae773e20d7&amp;dis_t=1618493971&amp;spec_id=MjM5MDIyMDQyMA%3D%3D1618493970&amp;vid=wxv_1823457475413475333&amp;format_id=10002
+    </string>
+</resources>
